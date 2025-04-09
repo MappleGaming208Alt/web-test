@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Open New Window</title>
+    <script>
+        function openNewWindow() {
+            // Open a new window with specific features
+            const newWindow = window.open(
+                'https://www.google.com', // URL to open
+                '_blank',                // Target (new tab or window)
+                'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=800,height=600'
+            );
+        }
+    </script>
+</head>
+<body>
+    <button onclick="openNewWindow()">Open Google in New Window</button>
+</body>
+</html>
