@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ProCod Web Explorer</title>
+    <style>
+        /* Global Styles */
+        body {
+            background-color: #16171d; /* Dark background */
+            color: #bdbecb; /* Light text color */
+            font-family: "Montserrat", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Centering Container */
+        .center-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        /* Title Styles */
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Subtext Styles */
+        .subtext {
+            font-size: 18px;
+            color: #8a8b98; /* Slightly lighter text for contrast */
+            margin-bottom: 30px;
+        }
+
+        /* Search Group Styles */
+        .group {
+            display: flex;
+            line-height: 28px;
+            align-items: center;
+            position: relative;
+            max-width: 400px; /* Adjusted width for better usability */
+        }
+
+        .input {
+            font-family: "Montserrat", sans-serif;
+            width: 100%;
+            height: 45px;
+            padding-left: 2.5rem;
+            box-shadow: 0 0 0 1.5px #2b2c37, 0 0 25px -17px #000;
+            border: 0;
+            border-radius: 12px;
+            background-color: #16171d;
+            outline: none;
+            color: #bdbecb;
+            transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+            cursor: text;
+        }
+
+        .input::placeholder {
+            color: #bdbecb;
+        }
+
+        .input:hover {
+            box-shadow: 0 0 0 2.5px #2f303d, 0px 0px 25px -15px #000;
+        }
+
+        .input:focus {
+            box-shadow: 0 0 0 2.5px #2f303d;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            fill: #bdbecb;
+            width: 1rem;
+            height: 1rem;
+            pointer-events: none;
+        }
+
+        /* Animated Button Styles - Dark Mode */
+        .animated-button {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 16px 36px;
+            border-radius: 100px; /* Rounded button */
+            font-size: 16px; 
+            background-color: #2b2c37; 
+            color: #66d9ef; 
+            box-shadow:
+                inset -2px -2px rgba(255,255,255,0.05),
+                inset -4px -4px rgba(255,255,255,0.05);
+                
+           cursor:pointer
+           transition all ease-in-out.
+           
+            
