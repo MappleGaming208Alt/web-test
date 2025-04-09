@@ -8,8 +8,6 @@
             background-color: #16171d; /* Dark background */
             color: #bdbecb; /* Light text color */
             font-family: "Montserrat", sans-serif;
-            margin: 0;
-            padding: 0;
         }
 
         /* Centering Container */
@@ -19,21 +17,6 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            text-align: center;
-        }
-
-        /* Title Styles */
-        .title {
-            font-size: 36px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        /* Subtext Styles */
-        .subtext {
-            font-size: 18px;
-            color: #8a8b98; /* Slightly lighter text for contrast */
-            margin-bottom: 30px;
         }
 
         /* Search Group Styles */
@@ -42,7 +25,7 @@
             line-height: 28px;
             align-items: center;
             position: relative;
-            max-width: 400px; /* Adjusted width for better usability */
+            max-width: 300px;
         }
 
         .input {
@@ -58,6 +41,7 @@
             color: #bdbecb;
             transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
             cursor: text;
+            z-index: 0;
         }
 
         .input::placeholder {
@@ -66,6 +50,10 @@
 
         .input:hover {
             box-shadow: 0 0 0 2.5px #2f303d, 0px 0px 25px -15px #000;
+        }
+
+        .input:active {
+            transform: scale(0.95);
         }
 
         .input:focus {
@@ -79,6 +67,7 @@
             width: 1rem;
             height: 1rem;
             pointer-events: none;
+            z-index: 1;
         }
 
         /* Animated Button Styles - Dark Mode */
@@ -88,14 +77,17 @@
             align-items: center;
             gap: 4px;
             padding: 16px 36px;
-            border-radius: 100px; /* Rounded button */
-            font-size: 16px; 
-            background-color: #2b2c37; 
-            color: #66d9ef; 
-            box-shadow: inset -2px -2px rgba(255,255,255,0.05), 
-                        inset -4px -4px rgba(255,255,255,0.05);
-            cursor:pointer;
-            transition: all ease-in-out;
+            border: 4px solid;
+            border-color: transparent;
+            font-size: 16px;
+            background-color: #2b2c37; /* Dark background */
+            border-radius: 100px;
+            font-weight: 600;
+            color: #66d9ef; /* Light text color */
+            box-shadow: 0 0 0 2px #66d9ef; /* Light shadow */
+            cursor: pointer;
+            overflow: hidden;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
             margin-top: 20px;
         }
 
@@ -167,14 +159,16 @@
             height: 220px;
             opacity: 1;
         }
+
+        /* Title Styles */
+        .title {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
     </style>
     <script>
         function openNewWindow() {
             const url = document.getElementById('query').value;
-            // Ensure the URL starts with a protocol if it doesn't
-            if (!url.startsWith('http://') && !url.startsWith('https://') && !url.startsWith('mailto:') && !url.startsWith('ftp:')) {
-                url = 'https://' + url;
-            }
             window.open(
                 url,
                 '_blank',
@@ -186,7 +180,6 @@
 <body>
     <div class="center-container">
         <div class="title">ProCod Web Explorer</div>
-        <div class="subtext">Explore the web in a cleaner manner, without any mods.</div>
         <div class="group">
             <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
                 <g>
